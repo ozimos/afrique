@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="grid.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <header class="masthead">
+        <h2 class="site-title">Standard two-column layout</h2>
+    </header><!-- .masthead -->
+
+    <main id="content" class="main-content">
+        <h2>Main content area</h2>
+        <p>The main content area is where the magic happens. Right now, the main content is on the left and the sidebar is on the right. If you go into the markup for this document and add <code>dir="rtl"</code> to the <code>html</code> element, the two elements will swap spaces because CSS Grid honors text direction.</p>
+<ul>
+    <li>Inspiration</li>
+    <li>webpack page, react page, gulp page</li>
+    <li>big first screen with colorful graphics</li>
+    <li>carousel, parallax, animation graphics</li>
+    <li>option 2 clean minimal design like gulp</li>
+
+
+</ul>
+    </main>
+
+    <aside class="sidebar">
+        <h3>The Sidebar</h3>
+        <p>The sidebar typically contains things like:</p>
+        <ul>
+            <li>Links</li>
+            <li>Menus</li>
+            <li>Ads</li>
+        </ul>
+    </aside>
+
+    <aside class="twin">
+        This should take up half the space
+    </aside>
+    <aside class="twin">
+        This should take up the other half of the space
+        <ul> <li>contributors</li>
+            <li>Inspiration webpack donation section, or separate contribution page </li>
+        </ul>
+
+    </aside>
+
+    <footer class="colophon grid">
+        <aside>Content, layout, design: <a href="https://twitter.com/mor10" target="_blank" rel="nofollow">Morten Rand-Hendriksen</a>.</aside>
+    </footer>
+
+</div>
+</body>
+</html>
