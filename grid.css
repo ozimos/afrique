@@ -154,7 +154,7 @@ CSS Grid layout for wider screens, when browser supports grid:
 		.site {
 			display: grid;
 			grid-template-columns:repeat(6, 1fr);
-			grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+			grid-template-rows: minmax(1em, auto) 1fr  1fr auto minmax(1em, auto);
 		}
 
 		.masthead,
@@ -169,10 +169,12 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 		.sidebar {
 			grid-column: 6/7;
+			grid-row: 2;
+
 		}
 
 		.twin {
-			grid-row: 3/4;
+			grid-row: 4/5;
 		}
 
 
