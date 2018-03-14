@@ -19,7 +19,6 @@ body {
 img {
 	display: block;
 	border: 0;
-	width: 100%;
 	height: auto;
 }
 
@@ -165,11 +164,11 @@ CSS Grid layout for wider screens, when browser supports grid:
 		}
 
 		.main-content {
-			grid-column: 1/5;
+			grid-column: 1/6;
 		}
 
 		.sidebar {
-			grid-column: 5/7;
+			grid-column: 6/7;
 		}
 
 		.twin {
