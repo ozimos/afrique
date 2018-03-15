@@ -6,10 +6,11 @@
 /*--------------------------------------------------------------
 CSS Reset
 --------------------------------------------------------------*/
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -22,14 +23,17 @@ img {
 	height: auto;
 }
 
-#social-networks a{
+#social-networks a {
 	color: #bd1e2e;
 	margin: 0px 30px;
 }
+
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers */
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -56,13 +60,14 @@ Accessibility
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+	z-index: 100000;
+	/* Above WP toolbar */
 }
-
 
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
+
 body,
 button,
 input,
@@ -89,6 +94,7 @@ p {
 /*--------------------------------------------------------------
 General styles
 --------------------------------------------------------------*/
+
 .site {
 	background: #ededed;
 	min-height: 100vh;
@@ -103,26 +109,30 @@ General styles
 }
 
 .main-content {
+	grid-area: main;
 	background: white;
 }
+.secondary-content {
+	grid-area: sc;
+}
 .masthead {
+	grid-area: mh;
 	background: white;
 	color: black;
 }
 
 .sidebar {
+	grid-area: sb;
 	background: #FF7F66;
 }
 
 .twin {
+	grid-area: tw;
 	background: #2185C5;
 }
 
-.twin:last-of-type {
-	background: #7ECEFD;
-}
-
 .colophon {
+	grid-area: cp;
 	display: flex;
 	padding: 2em;
 	background: #3E454C;
@@ -141,6 +151,7 @@ General styles
 /*--------------------------------------------------------------
 If no grid support, limit width to 50em and center align
 --------------------------------------------------------------*/
+
 @supports not (display: grid) {
 	.site {
 		max-width: 50em;
@@ -154,33 +165,17 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 @media screen and (min-width: 600px) {
 	@supports (display: grid) {
-
 		.site {
 			display: grid;
-			grid-template-columns:repeat(6, 1fr);
-			grid-template-rows: minmax(1em, auto) 1fr  auto auto minmax(1em, auto);
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: minmax(1em, auto) 1fr auto auto minmax(1em, auto);
+			grid-template-areas:
+      "mh 	mh 	 mh 	mh   mh mh "
+			"main main main main sb sb"
+			"tw 	tw 	 tw 	tw 	 tw tw"
+      "sc 	sc 	 sc 	sc 	 sc sc"
+      "cp 	cp 	 cp 	cp 	 cp cp ";
 		}
-
-		.masthead,
-		.colophon,
-		.twin, article {
-			grid-column: span 6;
-		}
-
-		.main-content {
-			grid-column: 1/6;
-		}
-
-		.sidebar {
-			grid-column: 6/7;
-			grid-row: 2;
-
-		}
-
-		.twin {
-			grid-row: 4/5;
-		}
-
 
 	}
 }
