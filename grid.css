@@ -22,7 +22,10 @@ img {
 	height: auto;
 }
 
-
+#social-networks a{
+	color: #bd1e2e;
+	margin: 0px 30px;
+}
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -103,8 +106,8 @@ General styles
 	background: white;
 }
 .masthead {
-	background: #2185C5;
-	color: white;
+	background: white;
+	color: black;
 }
 
 .sidebar {
@@ -120,6 +123,7 @@ General styles
 }
 
 .colophon {
+	display: flex;
 	padding: 2em;
 	background: #3E454C;
 	color: white;
@@ -154,12 +158,12 @@ CSS Grid layout for wider screens, when browser supports grid:
 		.site {
 			display: grid;
 			grid-template-columns:repeat(6, 1fr);
-			grid-template-rows: minmax(1em, auto) 1fr  1fr auto minmax(1em, auto);
+			grid-template-rows: minmax(1em, auto) 1fr  auto auto minmax(1em, auto);
 		}
 
 		.masthead,
 		.colophon,
-		.twin {
+		.twin, article {
 			grid-column: span 6;
 		}
 
